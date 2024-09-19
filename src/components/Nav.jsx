@@ -8,11 +8,12 @@ import Sidebar from './Sidebar';
 
 
 
-function Nav({toggleSidebarButton}) {
+function Nav({toggleSidebarButton,isSidebarOpen}) {
 
     const [isPopupChatOpen, setIsPopupChatOpen] = useState(false);
     const [isArrowFlip, setIsArrowFlip] = useState(false);
     const [isProfileOpen, setIsProfileOpen] = useState(false);
+    
     
     
     const toggleChatButton = () => {
@@ -31,54 +32,44 @@ function Nav({toggleSidebarButton}) {
 
   return (
     <>
-    
-    
-    <div className={navStyle.nav}>
-       
-        {/* SideBar Icon / SideBar Opened;Closed */}
-
-        <div onClick={toggleSidebarButton}>
-
-        <Tooltip text="Open Sidebar" position="bottom" arrow="top" arrowClassName='left-5' className='-left-2'>
-
+        <div className='flex flex-row justify-start items-center  m-2 mx-3'>
             
-                <img src="src/assets/icon/sidebar.svg" alt="Sidebar Icon" className={navStyle.icon}></img>
-            
-        </Tooltip>
-        </div>
-        
 
-        {/* New Chat Icon */}
-        <Tooltip text="New Chat">
-            <div>
-            <   img src="src/assets/icon/chat.svg" alt="Chat Icon" className={navStyle.icon}></img>
-            </div>
-        </Tooltip>
-        
+            <Tooltip text={isSidebarOpen ? "Close Sidebar" : "Open Sidebar"} arrow="top" arrowClassName='left-5'>
+
+                <div className="hover:bg-ahHoverColor p-2 rounded-lg cursor-pointer bg-none" onClick={toggleSidebarButton}>
+                    <img src='src/assets/icon/sidebar.svg' className='w-6 min-w-6'></img>
+                </div>
+            </Tooltip>
 
 
-        {/* ChatGPT Icon, Hanle When Clicked and Closed */}
-        <div className={navStyle.gptIcon} style={{width:"auto", borderRadius:"7px", backgroundColor: isPopupChatOpen ? "hsl(0, 0%, 20%)" : ''}} onClick={toggleChatButton}>
-            ChatGPT
 
-            <img style={{scale:"80%"}} src="src/assets/icon/down.svg" alt="Chat Icon" className={`${navStyle.icon} ${isArrowFlip ? navStyle.iconFlipped : 'z-0'}`}></img>
-
-            
-        </div>
-        
+            <Tooltip text="New Chat" position='bottom' className='-ml-5'>
+            <div className='hover:bg-ahHoverColor p-2 rounded-lg cursor-pointer bg-none'>
+                <img src='src/assets/icon/chat.svg' className='w-6 min-w-6'></img>
+            </div></Tooltip>
 
 
-        {/* Profile Icon */}
-        
-
-            <div style={{marginLeft: "auto", borderRadius: "50%"}} onClick={toggleProfileButton}>
-                <img src="src/assets/icon/profile.svg" alt="Profile Icon" className={navStyle.icon} ></img>
+            <div className='hover:bg-ahHoverColor rounded-lg px-3 py-[6px] text-ahTextColor2 font-medium text-lg
+                            flex flex-row select-none cursor-pointer bg-none relative' onClick={toggleChatButton}>
+                <p>ChatGPT Auto</p>
+                <img src="src/assets/icon/down.svg" className={`w-6 min-w-6 scale-75 -mr-1 transition-transform duration-200 ${isArrowFlip ? 'rotate-180' : 'rotate-0'}`}></img>
                 
+                <div className="absolute top-12 bottom-full left-0 ">
+                <PopBox isOpen={isPopupChatOpen}></PopBox></div>
             </div>
-          
-    </div>
-    <PopBox isOpen={isPopupChatOpen} ></PopBox>
-    <PopBox2 isOpen={isProfileOpen} ></PopBox2>
+
+
+            <div className='hover:bg-ahHoverColor p-2 rounded-full ml-auto cursor-pointer bg-none relative' onClick={toggleProfileButton}>
+                <img src='src/assets/icon/profile.svg' className='w-6 min-w-6 scale-125'></img>
+
+                <PopBox2 isOpen={isProfileOpen} ></PopBox2>
+            </div>
+           
+
+        </div>
+    
+    
     
     
     
@@ -88,3 +79,4 @@ function Nav({toggleSidebarButton}) {
 }
 
 export default Nav
+
