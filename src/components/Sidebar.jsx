@@ -1,12 +1,15 @@
 import React from 'react'
 
-function Sidebar({isOpen}) {
-    if (!isOpen) {
-        return null;
-    }
+function Sidebar() {
+   
 
   return (
-    <div className='absolute -left-0 h-full w-64 bg-red-900 opacity-100'>Sidebar</div>
+    <div className=''>sidebar test</div>
+
+      
+
+
+    
   )
 }
 

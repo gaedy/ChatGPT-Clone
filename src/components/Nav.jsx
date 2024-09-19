@@ -8,12 +8,12 @@ import Sidebar from './Sidebar';
 
 
 
-function Nav() {
+function Nav({toggleSidebarButton}) {
 
     const [isPopupChatOpen, setIsPopupChatOpen] = useState(false);
     const [isArrowFlip, setIsArrowFlip] = useState(false);
     const [isProfileOpen, setIsProfileOpen] = useState(false);
-    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    
     
     const toggleChatButton = () => {
         setIsPopupChatOpen(!isPopupChatOpen);
@@ -25,10 +25,7 @@ function Nav() {
         setIsProfileOpen(!isProfileOpen);
     }
 
-    const toggleSidebarButton = () => {
-        setIsSidebarOpen(!isSidebarOpen);
-
-    }
+    
 
 
 
@@ -39,12 +36,17 @@ function Nav() {
     <div className={navStyle.nav}>
        
         {/* SideBar Icon / SideBar Opened;Closed */}
-        
-        <Tooltip text="Open Sidebar" position="bottom" arrow="top" arrowClassName='left-5' className='left-0'>
+
         <div onClick={toggleSidebarButton}>
-            <img src="src/assets/icon/sidebar.svg" alt="Sidebar Icon" className={navStyle.icon}></img>
-        </div>
+
+        <Tooltip text="Open Sidebar" position="bottom" arrow="top" arrowClassName='left-5' className='-left-2'>
+
+            
+                <img src="src/assets/icon/sidebar.svg" alt="Sidebar Icon" className={navStyle.icon}></img>
+            
         </Tooltip>
+        </div>
+        
 
         {/* New Chat Icon */}
         <Tooltip text="New Chat">
@@ -73,13 +75,12 @@ function Nav() {
                 <img src="src/assets/icon/profile.svg" alt="Profile Icon" className={navStyle.icon} ></img>
                 
             </div>
-            
-
-            
-        
+          
     </div>
     <PopBox isOpen={isPopupChatOpen} ></PopBox>
     <PopBox2 isOpen={isProfileOpen} ></PopBox2>
+    
+    
     
     </>
     
