@@ -21,10 +21,10 @@ function Footer() {
             <Tooltip text="Attach File" arrow='bottom' className='tranform -translate-y-24' arrowClassName='left-7'><img className='w-6 ml-4 cursor-pointer ' src="src/assets/icon/attach.svg" alt="Link" onClick={toggleAttachButtom}></img></Tooltip>
             
             
-            <input className='w-3/4 px-3 h-3/4 flex-1 min-w-[75%] bg-transparent border-none outline-none	text-ahTextColor placeholder-ahTextColor2 text-base ' type="text" placeholder="Message ChatGPT"></input>
+            <input className='w-3/4 px-3 h-3/4 flex-1 min-w-[75%] bg-transparent border-none outline-none	text-ahTextColor00 placeholder-ahTextColor3 text-base ' type="text" placeholder="Message ChatGPT"></input>
             
             
-            <img className='w-8 mr-3 opacity-30' src="src/assets/icon/upload.svg" alt="Link"></img>
+            <img className='w-8 mr-3 opacity-30 pointer-events-none' src="src/assets/icon/upload.svg" alt="Link"></img>
             
         </div>
         <div className="absolute bottom-full w-full flex justify-center">

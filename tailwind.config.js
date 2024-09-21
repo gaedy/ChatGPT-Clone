@@ -17,6 +17,7 @@ export default {
         ahTextColor00: 'hsl(0, 0%, 95%)',
         ahTextColor: 'hsl(0, 0%, 85%)',
         ahTextColor2: 'hsl(0, 0%, 75%)',
+        ahTextColor3: 'hsl(0, 0%, 65%)',
 
 
       },

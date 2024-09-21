@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 
-function Tooltip({text, children, position = "bottom", arrow = "top", className = "", arrowClassName =""}) {
+function Tooltip({text, children, arrow = "top", className = "", arrowClassName =""}) {
 
     const arrowPosition = {
         
@@ -12,20 +12,22 @@ function Tooltip({text, children, position = "bottom", arrow = "top", className 
     }
 
 
-
     return (
     <>
-        
-        
-        <div className=' relative inline-block group'>
+
+        <div className=' relative inline-block group ' >
             {children}
-            <div className={`absolute ${className} bg-ahBackColor3 rounded-lg mt-3 invisible group-hover:visible opacity-0 group-hover:opacity-100
-                             text-ahTextColor top-full p-2 text-sm w-auto text-nowrap text-center transition-opacity`}>
+            <div className={`absolute ${className} bg-ahBackColor3 border-ahHoverColor border rounded-lg mt-3 invisible group-hover:visible opacity-0 group-hover:opacity-100
+                             text-ahTextColor top-full p-2 text-sm w-auto text-nowrap text-center transition-opacity delay-300`}>
                 {text}
-                <div className={`absolute ${arrowPosition[arrow]} ${arrowClassName} bg-ahBackColor3 rotate-45`}></div>
+                <div className={`absolute ${arrowPosition[arrow]} ${arrowClassName}  bg-ahBackColor3 rotate-45 `}></div>
             </div>
+
         
         </div>
+    
+        
+        
     </>
         
         
