@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Tooltip from './Tooltip';
 import PopBox from './PopBox';
 import PopBox2 from './PopBox2';
@@ -24,6 +24,27 @@ function Nav({toggleSidebarButton,isSidebarOpen}) {
     }
     const toggleProfileButton = () => {
         setIsProfileOpen(!isProfileOpen);
+    }
+
+
+    useEffect(() => {
+        if (isProfileOpen ) {
+            document.addEventListener('mousedown', clickOutside);
+        }
+        
+        return () => {
+            document.removeEventListener('mousedown', clickOutside);
+        }
+    }, [isProfileOpen]);
+
+
+    const itemRef = useRef();
+
+    const clickOutside = (event) => {
+        if (itemRef.current && !itemRef.current.contains(event.target)) {
+            toggleProfileButton();  
+        }
+
     }
 
     
@@ -53,19 +74,19 @@ function Nav({toggleSidebarButton,isSidebarOpen}) {
 
 
             <div className='hover:bg-ahHoverColor rounded-lg px-3 py-[6px] text-ahTextColor2 font-medium text-lg
-                            flex flex-row select-none cursor-pointer bg-none relative transition-all' onClick={toggleChatButton}>
+                            flex flex-row select-none cursor-pointer bg-none relative transition-all' onClick={toggleChatButton} ref={itemRef}>
                 <p>ChatGPT Auto</p>
-                <img src="src/assets/icon/down.svg" className={`w-6 min-w-6 scale-75 -mr-1 transition-transform duration-200 pointer-events-none ${isArrowFlip ? 'rotate-180' : 'rotate-0'}`}></img>
+                <img src="src/assets/icon/down.svg" className={`w-6 min-w-6 scale-75 -mr-1 transition-transform duration-200 pointer-events-none ${isArrowFlip ? 'rotate-180' : 'rotate-0'}`} ></img>
                 
                 <div className="absolute top-12 bottom-full left-0 ">
                 <PopBox isOpen={isPopupChatOpen}></PopBox></div>
             </div>
 
 
-            <div className='hover:bg-ahHoverColor p-2 rounded-full ml-auto cursor-pointer bg-none relative transition-all' onClick={toggleProfileButton}>
+            <div className='hover:bg-ahHoverColor p-2 rounded-full ml-auto cursor-pointer bg-none relative transition-all' onClick={toggleProfileButton}  ref={itemRef}>
                 <img src='src/assets/icon/profile.svg' className='w-6 min-w-6 scale-125 pointer-events-none'></img>
 
-                <PopBox2 isOpen={isProfileOpen} ></PopBox2>
+                
             </div>
            
 
@@ -73,7 +94,7 @@ function Nav({toggleSidebarButton,isSidebarOpen}) {
     
     
     
-    
+        <PopBox2 isOpen={isProfileOpen} ></PopBox2>
     
     </>
     

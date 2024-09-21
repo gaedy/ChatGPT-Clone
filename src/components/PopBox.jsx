@@ -9,7 +9,7 @@ function PopBox({isOpen}) {
 
     return (
 
-        <div className='bg-ahHoverColor text-ahTextColor border border-ahBorderColor relative   w-svw max-h-96 max-w-sm z-10
+        <div className='bg-ahHoverColor text-ahTextColor border border-ahBorderColor relative w-svw max-h-96 max-w-sm z-10
         rounded-2xl p-2 flex flex-col '
         >
             
@@ -19,7 +19,7 @@ function PopBox({isOpen}) {
                 </div>
                 <div className='mr-auto'>
                     <p className='text-sm'>ChatGPT Plus</p>
-                    <p className='text-xs'>Our Smartest Model & More</p>
+                    <p className='text-xs text-ahTextColor2'>Our Smartest Model & More</p>
                     </div>
                 <div>
                     
@@ -32,7 +32,7 @@ function PopBox({isOpen}) {
                 <img src='src/assets/icon/chat1.svg' className='w-6 mr-3 brightness-90'></img>
                 <div className='mr-auto'>
                     <p className='text-sm'>ChatGPT</p>
-                    <p className='text-xs'>Great for everyday tasks</p>
+                    <p className='text-xs text-ahTextColor2'>Great for everyday tasks</p>
                 </div>
             </div>
 
