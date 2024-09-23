@@ -18,4 +18,5 @@ export const suggestionsArray = [
     icon: "src/assets/icon/sugg4.svg",
   },
   
+  
 ]

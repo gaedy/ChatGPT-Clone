@@ -9,7 +9,7 @@ function PopBox2({isOpen}) {
     return (
 
         <div className='bg-ahHoverColor text-ahTextColor border border-ahBorderColor fixed top-14 right-4 w-svw max-h-fit max-w-xs z-10
-        rounded-2xl p-2 flex flex-col  '
+        rounded-2xl p-2 flex flex-col shadow-lg '
         >
             
             <div className='hover:bg-ahBorderColor cursor-pointer h-[40%] rounded-lg p-3 flex flex-row justify-between items-center'>

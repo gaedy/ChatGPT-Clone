@@ -35,7 +35,7 @@ function Footer() {
 
     <footer className='flex flex-col justify-center items-center h-fit w-full px-4 relative'>
 
-        <div className='w-full max-w-3xl bg-ahHoverColor h-[52px] rounded-full flex flex-row justify-center items-center' >
+        <div className='w-full max-w-3xl bg-ahHoverColor h-[52px] rounded-full flex flex-row justify-center items-center border border-ahBorderColor' >
             
             <Tooltip text="Attach File" arrow='bottom' className='tranform -translate-y-24' arrowClassName='left-7'><img className='w-6 ml-4 cursor-pointer ' src="src/assets/icon/attach.svg" alt="Link" onClick={toggleAttachButtom} ref={itemRef}></img></Tooltip>
             

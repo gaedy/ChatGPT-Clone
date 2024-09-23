@@ -14,8 +14,8 @@ function PopBox3({isOpen}) {
 
     return (
 
-        <div className=' relative bg-ahHoverColor text-ahTextColor border border-ahBorderColor -mb-4 sm:-left-44  w-svw max-h-fit max-w-xs z-10
-        rounded-2xl p-2 flex flex-col  '
+        <div className=' relative bg-ahHoverColor text-ahTextColor border border-ahBorderColor shadow-xl -mb-2 md:-left-44  w-svw max-h-fit max-w-xs z-10
+        rounded-2xl p-2 flex flex-col '
         >
             
             <div className='hover:bg-ahBorderColor cursor-pointer h-[40%] rounded-lg p-3 flex flex-row justify-between items-center'>

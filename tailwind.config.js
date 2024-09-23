@@ -11,6 +11,7 @@ export default {
         ahBackColor: 'hsl(0, 0%, 15%)',
         ahBackColor2: 'hsl(0, 0%, 10%)',
         ahBackColor3: 'hsl(0, 0%, 5%)',
+        
         ahHoverColor: 'hsl(0, 0%, 20%)',
         ahBorderColor: 'hsl(0, 0%, 25%)',
 

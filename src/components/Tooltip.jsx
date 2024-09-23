@@ -18,7 +18,7 @@ function Tooltip({text, children, arrow = "top", className = "", arrowClassName 
         <div className=' relative inline-block group ' >
             {children}
             <div className={`absolute ${className} bg-ahBackColor3 border-ahHoverColor border rounded-lg mt-3 invisible group-hover:visible opacity-0 group-hover:opacity-100
-                             text-ahTextColor top-full p-2 text-sm w-auto text-nowrap text-center transition-opacity delay-300`}>
+                             text-ahTextColor top-full p-2 text-sm w-auto text-nowrap text-center shadow-md`}>
                 {text}
                 <div className={`absolute ${arrowPosition[arrow]} ${arrowClassName}  bg-ahBackColor3 rotate-45 `}></div>
             </div>
