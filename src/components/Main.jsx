@@ -22,7 +22,7 @@ function Main() {
           <Suggest
            text={suggestion.text}
            icon={suggestion.icon}
-           className={index < 2 ? "hidden md:flex" : ""}  
+           className={index < 2 && "hidden md:flex"}  
           />
 
         )

@@ -8,13 +8,13 @@ function PopBox2({isOpen}) {
 
     return (
 
-        <div className='bg-ahHoverColor text-ahTextColor border border-ahBorderColor fixed top-14 right-4 w-svw max-h-fit max-w-xs z-10
+        <div className='bg-ahHoverColor text-ahTextColor00 border border-ahBorderColor fixed top-14  right-4 w-64 h-fit z-10
         rounded-2xl p-2 flex flex-col shadow-lg '
         >
             
-            <div className='hover:bg-ahBorderColor cursor-pointer h-[40%] rounded-lg p-3 flex flex-row justify-between items-center'>
+            <div className='hover:bg-ahBorderColor cursor-pointer rounded-lg p-3 flex flex-row justify-between items-center'>
                 <div>
-                    <img src='src/assets/icon/user2.svg' className='w-6 mr-3 scale-150 brightness-150'></img>
+                    <img src='src/assets/icon/user2.svg' className='w-6 mr-3 scale-150 brightness-110'></img>
                 </div>
                 <div className='mr-auto'>
                     <p className='text-sm'>My GPTs</p>
@@ -24,16 +24,16 @@ function PopBox2({isOpen}) {
             </div>
 
 
-            <div className='hover:bg-ahBorderColor cursor-pointer h-[40%] rounded-lg p-3 flex flex-row justify-between items-center'>
-                <img src='src/assets/icon/user1.svg' className='w-6 mr-3 scale-150 brightness-150'></img>
+            <div className='hover:bg-ahBorderColor cursor-pointer rounded-lg p-3 flex flex-row justify-between items-center'>
+                <img src='src/assets/icon/user1.svg' className='w-6 mr-3 scale-150 brightness-110'></img>
                 <div className='mr-auto'>
                     <p className='text-sm'>Customize ChatGPT</p>
                     
                 </div>
             </div>
 
-            <div className='hover:bg-ahBorderColor cursor-pointer h-[40%] rounded-lg p-3 flex flex-row justify-between items-center'>
-                <img src='src/assets/icon/settings.svg' className='w-6 mr-3 scale-150 brightness-150'></img>
+            <div className='hover:bg-ahBorderColor cursor-pointer rounded-lg p-3 flex flex-row justify-between items-center'>
+                <img src='src/assets/icon/settings.svg' className='w-6 mr-3 scale-150 brightness-110'></img>
                 <div className='mr-auto'>
                     <p className='text-sm'>Settings</p>
                     
@@ -43,8 +43,8 @@ function PopBox2({isOpen}) {
 
             <hr className='w-[90%] border-1 m-1 flex justify-center self-center opacity-10'></hr>
             
-            <div className='hover:bg-ahBorderColor cursor-pointer h-[25%] rounded-lg p-3  flex flex-row justify-between items-center'>
-                <img src='src/assets/icon/star.svg' className='w-6 p-1 mr-3 scale-90 brightness-150'></img>
+            <div className='hover:bg-ahBorderColor cursor-pointer rounded-lg p-3  flex flex-row justify-between items-center'>
+                <img src='src/assets/icon/star.svg' className='w-6 p-1 mr-3 scale-90 brightness-90'></img>
                 <div className='mr-auto'>
                     <p className='text-sm'>Upgrade Plan</p>
                 </div>
@@ -52,8 +52,8 @@ function PopBox2({isOpen}) {
 
             <hr className='w-[90%] border-1 m-1 flex justify-center self-center opacity-10'></hr>
 
-            <div className='hover:bg-ahBorderColor cursor-pointer h-[25%] rounded-lg p-3  flex flex-row justify-between items-center'>
-                <img src='src/assets/icon/logout.svg' className='w-6 mr-3 scale-150 brightness-150'></img>
+            <div className='hover:bg-ahBorderColor cursor-pointer  rounded-lg p-3  flex flex-row justify-between items-center'>
+                <img src='src/assets/icon/logout.svg' className='w-6 mr-3 scale-150 brightness-110'></img>
                 <div className='mr-auto'>
                     <p className='text-sm'>Log Out</p>
                 </div>
