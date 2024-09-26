@@ -1,4 +1,7 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+import Settings from "./Pages/Settings/Settings";
+
 
 function PopBox2({isOpen}) {
     if (!isOpen) {
