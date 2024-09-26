@@ -2,7 +2,8 @@ import React from 'react'
 import Tooltip from './Tooltip'
 import PopBox3 from './PopBox3'
 import { useState, useEffect, useRef } from 'react'
-
+import attach from '/src/assets/icon/attach.svg';
+import upload from '/src/assets/icon/upload.svg';
 function Footer() {
 
   const [isAttachOpen, setIsAttachOpen] = useState(false);
@@ -40,12 +41,12 @@ function Footer() {
             
             <Tooltip text="Attach File" arrow='bottom' className='tranform -translate-y-24' arrowClassName='left-7'>
               <div className=' w-6 ml-4 cursor-pointer select-none' onClick={toggleAttachButtom} ref={itemRef}>
-                <img className=' pointer-events-none' src="src/assets/icon/attach.svg" alt="Link" ></img>
+                <img className=' pointer-events-none' src={attach} alt="Link" ></img>
               </div>
             </Tooltip>
             
             <input className='w-3/4 px-3  h-3/4 flex-1 min-w-[75%] bg-transparent border-none outline-none	text-ahTextColor00 placeholder-ahTextColor3 text-base  ' type="text" placeholder="Message ChatGPT"></input>
-            <img className='w-8 mr-3 opacity-30 pointer-events-none select-none' src="src/assets/icon/upload.svg" alt="Link"></img>
+            <img className='w-8 mr-3 opacity-30 pointer-events-none select-none' src={upload} alt="Link"></img>
             
             
         </div>

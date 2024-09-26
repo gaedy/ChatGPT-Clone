@@ -1,21 +1,25 @@
+import sugg1 from '/src/assets/icon/sugg1.svg';
+import sugg2 from '/src/assets/icon/sugg2.svg';
+import sugg3 from '/src/assets/icon/sugg3.svg';
+import sugg4 from '/src/assets/icon/sugg4.svg';
 export const suggestionsArray = [
 
 
     {
     text: "ChatGPT is credited with accelerating the AI boom",
-    icon: "src/assets/icon/sugg1.svg",
+    icon: sugg1,
   },
   {
     text: "These labels were used to train a model to detect such content",
-    icon: "src/assets/icon/sugg2.svg",
+    icon: sugg2,
   },
   {
     text: "OpenAI collects data from ChatGPT users to train",
-    icon: "src/assets/icon/sugg3.svg",
+    icon: sugg3,
   },
   {
     text: "ChatGPT attempts to reduce harmful and deceitful responses",
-    icon: "src/assets/icon/sugg4.svg",
+    icon: sugg4,
   },
   
   

@@ -7,23 +7,20 @@ import DataControl from './DataControl/DataControl.jsx'
 import BuilderProfile from './BuilderProfile/BuilderProfile.jsx'
 import ConnectApps from './ConnectApps/ConnectApps.jsx'
 import Security from './Security/Security.jsx'
-// import { settingsArray } from './SettingsArray.jsx'
+import closelogo from '/src/assets/icon/close.svg'
 
 export const settingsArray = [
-    {path: "general", name:"General", element:<General/>},
-    {path: "personalization", name:"Personalization",  element:<Personalization/>},
-    {path: "speech", name:"Speech", element:<Speech/>},
-    {path: "datacontrol", name:"Data Control", element:<DataControl/>},
-    {path: "builderprofile", name:"Builder Profile", element:<BuilderProfile/>},
-    {path: "connectedapps", name:"Connected Apps", element:<ConnectApps/>},
-    {path: "security", name:"Security", element:<Security/>},
-    
+    {path: "general", name:"General"},
+    {path: "personalization", name:"Personalization"},
+    {path: "speech", name:"Speech"},
+    {path: "datacontrol", name:"Data Control"},
+    {path: "builderprofile", name:"Builder Profile"},
+    {path: "connectedapps", name:"Connected Apps"},
+    {path: "security", name:"Security"},
 ];
 
 
-
 function Settings() {
-
 
 
   return (
@@ -36,9 +33,10 @@ function Settings() {
 
                     <NavLink to="/">
                         <div className='hover:bg-ahBorderColor cursor-pointer rounded-full p-1'>
-                            <img src='src/assets/icon/close.svg' className='w-6 scale-100'></img>
+                            <img src={closelogo} className='w-6 scale-100'></img>
                         </div>
                     </NavLink>
+                    
                     
                 </div>
                 <hr className='w-full border-1 m-1 opacity-10 my-4'></hr>
@@ -47,19 +45,13 @@ function Settings() {
 
                     
 
-                    <div className=' w-1/4 text-md flex flex-col justify-start gap-2 pr-4 '>
-                        
-                        {/* <NavLink to="/settings/general" className={({isActive}) => {
-                            return isActive && "bg-ahBorderColor rounded-md"}}>
-                            <div className='p-1 hover:bg-ahBorderColor rounded-md'>General</div>
-                        </NavLink> */}
-                        
-
+                    <div className=' w-1/4 text-sm flex flex-col justify-start gap-2 pr-6 '>
+                       
                         {settingsArray.map((setting) =>(
                             <>
                                 <NavLink key={setting} to={setting.path} className={({isActive}) => {
                                     return isActive && "bg-ahBorderColor rounded-md"}}>
-                                    <div className='p-1 hover:bg-ahBorderColor rounded-md'>{setting.name}</div>
+                                    <div className='p-2 hover:bg-ahBorderColor rounded-md'>{setting.name}</div>
                                 </NavLink>
                             </>
                         ))}
@@ -68,11 +60,11 @@ function Settings() {
 
                     </div>
 
-                    <div className=' w-3/4 p-4'>
+                    <div className=' w-3/4 p-2'>
 
                     
                         <Routes>
-                            {/* <Route path="/" element={<Navigate to="general" replace />} /> */}
+                            <Route index element={<Navigate to="general" />}/>
                             <Route path="general" element={<General/>}/>
                             <Route path="personalization" element={<Personalization/>}/>
                             <Route path="speech" element={<Speech/>}/>

@@ -1,12 +1,11 @@
 import React, { useRef } from "react"
 import { useState, useEffect, usere } from "react"
-import Nav from "./components/Nav"
-import Main from "./components/Main"
-import Footer from "./components/Footer"
-import Sidebar from "./components/Sidebar"
 import { Outlet } from "react-router-dom"
-
-
+import { Fragment } from "react"
+import Nav from "./components/Pages/Home/Nav"
+import Main from "./components/Pages/Home/Main"
+import Footer from "./components/Pages/Home/Footer"
+import Sidebar from "./components/Pages/Home/Sidebar"
 
 
 function App() {
@@ -39,7 +38,7 @@ function App() {
  
   return (
 
-  <>
+  <Fragment>
   
     <div className={`flex flex-col h-screen transition-all duration-500 ${isSidebarOpen ? "md:ml-64" : "ml-0 "}`}>
 
@@ -54,7 +53,7 @@ function App() {
     
     <div className={isSidebarOpen && "overlay md:hidden"}></div>
     
-  </>
+  </Fragment>
 
     
 )}

@@ -1,10 +1,11 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Settings from './components/Pages/Settings/Settings.jsx'
 import General from './components/Pages/Settings/General/General.jsx'
+import App from './App.jsx'
+import ErrorHandle from './components/Pages/Home/ErrorHandle.jsx'
 
 
 
@@ -13,19 +14,23 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App/>,
+    errorElement: <ErrorHandle/>,
     children: [
       {
-        path: "settings/*",
+        path: "settings",
         element: <Settings/>,
         children: [
           {
-            path: ":id",
+            path: "/settings/:id",
+            
           },
         ],
         
       },
     ]
   },
+  
+  
   
 ]);
 

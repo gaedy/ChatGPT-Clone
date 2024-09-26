@@ -2,6 +2,13 @@ import React from 'react'
 import Tooltip from './Tooltip'
 import Item from './Items/Item'
 import { itemsArray } from './Items/itemsArray'
+import sidebar1 from '/src/assets/icon/sidebar1.svg'
+import sidebarmobile from '/src/assets/icon/sidebarmobile.svg'
+import newchat from '/src/assets/icon/newchat.svg'
+import logo from '/src/assets/icon/logo.svg'
+import menu from '/src/assets/icon/menu.svg'
+import chatgptplus from '/src/assets/icon/chatgptplus.svg'
+
 
 function Sidebar({toggleSidebarButton}) {
 
@@ -18,15 +25,15 @@ function Sidebar({toggleSidebarButton}) {
         <Tooltip text="Close Sidebar" className='translate-x-14 -translate-y-12' arrow='left'>
           <div className='hover:bg-ahBackColor p-2 rounded-lg cursor-pointer' onClick={toggleSidebarButton}>
 
-            <img src='src/assets/icon/sidebar1.svg' className='w-6 pointer-events-none md:flex hidden brightness-75'></img>
-            <img src='src/assets/icon/sidebarmobile.svg' className='w-6 pointer-events-none md:hidden brightness-75'></img>
+            <img src={sidebar1} className='w-6 pointer-events-none md:flex hidden brightness-75'></img>
+            <img src={sidebarmobile} className='w-6 pointer-events-none md:hidden brightness-75'></img>
           </div>
         </Tooltip>
 
 
         <Tooltip text="New Chat" arrow='right' className='-translate-x-24 -translate-y-12' arrowClassName='left-[6px]'>
           <div className='hover:bg-ahBackColor p-2 rounded-lg cursor-pointer'>
-            <img src='src/assets/icon/newchat.svg' className='w-6 pointer-events-none brightness-75'></img>
+            <img src={newchat} className='w-6 pointer-events-none brightness-75'></img>
           </div>
         </Tooltip>
       </div>
@@ -39,14 +46,14 @@ function Sidebar({toggleSidebarButton}) {
 
       <div className=' overflow-y-auto overflow-clip mt-4 h-full'>
         <div className='h-10 hover:bg-ahBackColor rounded-lg mt-0 p-2 mx-1 mr-2 flex flex-row items-center text-sm cursor-pointer group'>
-          <img src='src/assets/icon/logo.svg' className='w-6 scale-75 mr-2 pointer-events-none'></img>
+          <img src={logo} className='w-6 scale-75 mr-2 pointer-events-none'></img>
           <div>ChatGPT</div>
 
-          <img src='src/assets/icon/newchat.svg' className='w-6 scale-[70%] brightness-75  hover:brightness-100 ml-auto hidden group-hover:flex'></img>
+          <img src={newchat} className='w-6 scale-[70%] brightness-75  hover:brightness-100 ml-auto hidden group-hover:flex'></img>
         </div>
 
         <div className='h-10 hover:bg-ahBackColor rounded-lg p-2 mx-1 mr-2 flex flex-row items-center text-sm cursor-pointer'>
-          <img src='src/assets/icon/menu.svg' className='w-6 scale-75 mr-2 brightness-75'></img>
+          <img src={menu} className='w-6 scale-75 mr-2 brightness-75'></img>
           <div>Explore GPTs</div>
         </div>
 
@@ -59,15 +66,11 @@ function Sidebar({toggleSidebarButton}) {
           ))}
         </div>
         
-        
-
-
-
       </div>
 
 
         <div className=' p-2 h-14 mx-1 mt-2 hover:bg-ahBackColor rounded-lg flex flex-row justify-start cursor-pointer'>
-          <img src='src/assets/icon/chatgptplus.svg' className='w-6 scale-75 brightness-75 mr-2 '></img>
+          <img src={chatgptplus} className='w-6 scale-75 brightness-75 mr-2 '></img>
 
           <div className='flex flex-col justify-center items-start'>
             
