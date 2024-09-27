@@ -2,7 +2,7 @@ import React from 'react'
 
 function BuilderProfile() {
   return (
-    <div>BuilderProfile</div>
+    <div>Builder Profile</div>
   )
 }
 
