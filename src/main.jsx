@@ -6,6 +6,9 @@ import Settings from './components/Pages/Settings/Settings.jsx'
 import App from './App.jsx'
 import ErrorHandle from './components/Pages/Home/ErrorHandle.jsx'
 import Pricing from './components/Pages/Pricing/Pricing.jsx'
+import Personal from './components/Pages/Pricing/Personal/Personal.jsx'
+import Business from './components/Pages/Pricing/Business/Business.jsx'
+
 
 const router = createBrowserRouter([
   {
@@ -28,8 +31,24 @@ const router = createBrowserRouter([
   },
 
   {
-    path: "pricing",
-    element: <Pricing/>
+    path: "/pricing",
+    element: <Pricing/>,
+    children: [
+      {
+        index: true,
+        element: <Personal/>,
+      },
+      {
+        path: "personal",
+        element: <Personal/>,
+        
+      },
+      {
+        path: "business",
+        element: <Business/>,
+      }
+      
+    ]
   }
   
   
