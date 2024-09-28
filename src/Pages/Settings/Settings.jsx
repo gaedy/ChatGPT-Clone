@@ -1,14 +1,16 @@
 import React, { Fragment } from 'react'
 import { Outlet, NavLink, Route, Routes, Navigate } from 'react-router-dom'
-import General from './General/General.jsx'
-import Personalization from './Personalization/Personalization.jsx'
-import Speech from './Speech/Speech.jsx'
-import DataControl from './DataControl/DataControl.jsx'
-import BuilderProfile from './BuilderProfile/BuilderProfile.jsx'
-import ConnectApps from './ConnectApps/ConnectApps.jsx'
-import Security from './Security/Security.jsx'
+import General from './General/General';
+import Personalization from './Personalization/Personalization';
+import Speech from './Speech/Speech';
+import DataControl from './DataControl/DataControl';
+import BuilderProfile from './BuilderProfile/BuilderProfile';
+import ConnectApps from './ConnectApps/ConnectApps';
+import Security from './Security/Security';
+import Tooltip from '../../components/Tooltip';
 import closelogo from '/src/assets/icon/close.svg'
-import Tooltip from '../Home/Tooltip.jsx'
+
+
 
 export const settingsArray = [
     {path: "general", name:"General"},

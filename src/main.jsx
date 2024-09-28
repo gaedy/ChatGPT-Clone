@@ -2,13 +2,12 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Settings from './components/Pages/Settings/Settings.jsx'
-import App from './App.jsx'
-import ErrorHandle from './components/Pages/Home/ErrorHandle.jsx'
-import Pricing from './components/Pages/Pricing/Pricing.jsx'
-import Personal from './components/Pages/Pricing/Personal/Personal.jsx'
-import Business from './components/Pages/Pricing/Business/Business.jsx'
-
+import Settings from './Pages/Settings/Settings'
+import App from './App'
+import ErrorHandle from './Pages/ErrorHandle'
+import Pricing from './Pages/Pricing/Pricing'
+import Personal from './Pages/Pricing/Personal/Personal'
+import Business from './Pages/Pricing/Business/Business'
 
 const router = createBrowserRouter([
   {

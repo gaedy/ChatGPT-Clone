@@ -2,10 +2,10 @@ import React, { useRef } from "react"
 import { useState, useEffect, usere } from "react"
 import { Outlet } from "react-router-dom"
 import { Fragment } from "react"
-import Nav from "./components/Pages/Home/Nav"
-import Main from "./components/Pages/Home/Main"
-import Footer from "./components/Pages/Home/Footer"
-import Sidebar from "./components/Pages/Home/Sidebar"
+import Nav from "./Pages/Home/Nav"
+import Main from "./Pages/Home/Main"
+import Footer from "./Pages/Home/Footer"
+import Sidebar from "./Pages/Home/Sidebar"
 
 
 function App() {

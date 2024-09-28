@@ -1,7 +1,10 @@
 import React from 'react'
-import Suggest from './Suggestions/Suggest'
-import { suggestionsArray } from './Suggestions/suggestionsArray'
+// import Suggest from './Suggestions/Suggest'
+// import { suggestionsArray } from './Suggestions/suggestionsArray'
 import logo from '/src/assets/icon/logo.svg';
+import Suggest from './Suggestions/Suggest';
+import { suggestionsArray } from './Suggestions/suggestionsArray';
+
 
 
 

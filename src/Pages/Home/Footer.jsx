@@ -1,9 +1,12 @@
 import React from 'react'
-import Tooltip from './Tooltip'
-import PopBox3 from './PopBox3'
+// import Tooltip from './Tooltip'
+// import PopBox3 from './PopBox3'
 import { useState, useEffect, useRef } from 'react'
 import attach from '/src/assets/icon/attach.svg';
 import upload from '/src/assets/icon/upload.svg';
+import Tooltip from '../../components/Tooltip';
+import PopBox3 from '../../components/PopBox3';
+
 function Footer() {
 
   const [isAttachOpen, setIsAttachOpen] = useState(false);
