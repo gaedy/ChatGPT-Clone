@@ -1,7 +1,8 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
+NavLink
 
-
-function PopBox({isOpen}) {
+function PopBox({isOpen, refProp}) {
     if (!isOpen) {
         return null;
     }
@@ -10,22 +11,25 @@ function PopBox({isOpen}) {
     return (
 
         <div className='bg-ahHoverColor text-ahTextColor00 border border-ahBorderColor relative w-dvw max-h-96 max-w-[22rem] z-50
-        rounded-2xl p-2 flex flex-col shadow-lg '
+        rounded-2xl p-2 flex flex-col shadow-lg' ref={refProp}
         >
             
-            <div className='hover:bg-ahBorderColor cursor-pointer h-[40%] rounded-lg p-3 flex flex-row justify-between items-center'>
-                <div>
-                    <img src='src/assets/icon/chat2.svg' className='w-6 mr-3 brightness-90'></img>
-                </div>
-                <div className='mr-auto'>
-                    <p className='text-sm'>ChatGPT Plus</p>
-                    <p className='text-xs text-ahTextColor2'>Our Smartest Model & More</p>
+            <NavLink to="/pricing">
+                <div className='hover:bg-ahBorderColor cursor-pointer h-[40%] rounded-lg p-3 flex flex-row justify-between items-center'>
+                    <div>
+                        <img src='src/assets/icon/chat2.svg' className='w-6 mr-3 brightness-90'></img>
                     </div>
-                <div>
-                    
-                    <div className='bg-blue-700 hover:bg-blue-800  p-1 text-sm rounded-2xl w-20 h-8 flex justify-center items-center text-ahTextColor00 font-semibold '>Upgrade</div>
+                    <div className='mr-auto'>
+                        <p className='text-sm'>ChatGPT Plus</p>
+                        <p className='text-xs text-ahTextColor2'>Our Smartest Model & More</p>
+                        </div>
+                    <div>
+                        
+                        <div className='bg-blue-700 hover:bg-blue-800  p-1 text-sm rounded-2xl w-20 h-8 flex justify-center items-center text-ahTextColor00 font-semibold '>Upgrade</div>
+                    </div>
                 </div>
-            </div>
+            </NavLink>
+            
 
 
             <div className='hover:bg-ahBorderColor cursor-pointer h-[40%] rounded-lg p-3 flex flex-row justify-between items-center'>

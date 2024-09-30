@@ -1,6 +1,9 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
-function PopBox2({isOpen}) {
+
+function PopBox2({isOpen, refProp }) {
+    
     if (!isOpen) {
         return null;
     }
@@ -9,7 +12,7 @@ function PopBox2({isOpen}) {
     return (
 
         <div className='bg-ahHoverColor text-ahTextColor00 border border-ahBorderColor fixed top-14  right-4 w-64 h-fit z-10
-        rounded-2xl p-2 flex flex-col shadow-lg '
+        rounded-2xl p-2 flex flex-col shadow-lg ' ref={refProp}
         >
             
             <div className='hover:bg-ahBorderColor cursor-pointer rounded-lg p-3 flex flex-row justify-between items-center'>
@@ -32,13 +35,17 @@ function PopBox2({isOpen}) {
                 </div>
             </div>
 
-            <div className='hover:bg-ahBorderColor cursor-pointer rounded-lg p-3 flex flex-row justify-between items-center'>
-                <img src='src/assets/icon/settings.svg' className='w-6 mr-3 scale-150 brightness-110'></img>
-                <div className='mr-auto'>
-                    <p className='text-sm'>Settings</p>
-                    
+            <NavLink to="/settings">
+                <div className='hover:bg-ahBorderColor cursor-pointer rounded-lg p-3 flex flex-row justify-between items-center'>
+                    <img src='src/assets/icon/settings.svg' className='w-6 mr-3 scale-150 brightness-110'></img>
+                    <div className='mr-auto'>
+                        <p className='text-sm'>Settings</p>
+                        
+                    </div>
                 </div>
-            </div>
+            </NavLink>
+
+            
 
 
             <hr className='w-[90%] border-1 m-1 flex justify-center self-center opacity-10'></hr>
