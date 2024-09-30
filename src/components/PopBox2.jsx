@@ -49,13 +49,17 @@ function PopBox2({isOpen, refProp }) {
 
 
             <hr className='w-[90%] border-1 m-1 flex justify-center self-center opacity-10'></hr>
-            
-            <div className='hover:bg-ahBorderColor cursor-pointer rounded-lg p-3  flex flex-row justify-between items-center'>
-                <img src='src/assets/icon/star.svg' className='w-6 p-1 mr-3 scale-90 brightness-90'></img>
-                <div className='mr-auto'>
-                    <p className='text-sm'>Upgrade Plan</p>
+
+            <NavLink to="/pricing">
+                <div className='hover:bg-ahBorderColor cursor-pointer rounded-lg p-3  flex flex-row justify-between items-center'>
+                    <img src='src/assets/icon/star.svg' className='w-6 p-1 mr-3 scale-90 brightness-90'></img>
+                    <div className='mr-auto'>
+                        <p className='text-sm'>Upgrade Plan</p>
+                    </div>
                 </div>
-            </div>
+            </NavLink>
+            
+            
 
             <hr className='w-[90%] border-1 m-1 flex justify-center self-center opacity-10'></hr>
 

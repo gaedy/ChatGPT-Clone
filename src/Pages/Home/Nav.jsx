@@ -80,7 +80,7 @@ return (
                 position='bottom' 
                 className='right-0 ' 
                 arrow='top' 
-                arrowClassName='left-16'
+                arrowClassName='left-16 border-l border-t '
             >
                 <div 
                     className={`hover:bg-ahHoverColor p-2 rounded-lg cursor-pointer bg-none transition-all 
@@ -100,7 +100,7 @@ return (
             <Tooltip 
                 text={isSidebarOpen ? "Close Sidebar" : "Open Sidebar"} 
                 arrow="top" 
-                arrowClassName='left-5'
+                arrowClassName='left-5 border-l border-t'
             >
 
                 <div 
@@ -118,7 +118,8 @@ return (
             <Tooltip 
                 text="New Chat" 
                 position='bottom' 
-                className='-ml-5 '
+                className='-ml-5'
+                arrowClassName='border-l border-t'
             >
                 <NavLink 
                     to="/"

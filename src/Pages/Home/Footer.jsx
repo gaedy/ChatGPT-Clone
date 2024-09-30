@@ -31,7 +31,7 @@ return (
           text="Attach File"
           arrow='bottom'
           className='tranform -translate-y-24'
-          arrowClassName='left-7'
+          arrowClassName='left-7 border-b border-r'
         >
           <div 
             className=' w-6 ml-4 cursor-pointer select-none'

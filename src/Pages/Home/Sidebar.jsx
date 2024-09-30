@@ -25,7 +25,7 @@ function Sidebar({toggleSidebarButton}) {
 
       <div className='flex flex-row justify-between mx-1 '>
 
-        <Tooltip text="Close Sidebar" className='translate-x-14 -translate-y-12' arrow='left'>
+        <Tooltip text="Close Sidebar" className='translate-x-14 -translate-y-12' arrow='left' arrowClassName='border-b border-l'>
           <div className='hover:bg-ahBackColor p-2 rounded-lg cursor-pointer' onClick={toggleSidebarButton}>
 
             <img src={sidebar1} className='w-6 pointer-events-none md:flex hidden brightness-75'></img>
@@ -34,7 +34,7 @@ function Sidebar({toggleSidebarButton}) {
         </Tooltip>
 
 
-        <Tooltip text="New Chat" arrow='right' className='-translate-x-24 -translate-y-12' arrowClassName='left-[6px]'>
+        <Tooltip text="New Chat" arrow='right' className='-translate-x-24 -translate-y-12' arrowClassName='left-[6px] border-t border-r'>
           <div className='hover:bg-ahBackColor p-2 rounded-lg cursor-pointer'>
             <img src={newchat} className='w-6 pointer-events-none brightness-75'></img>
           </div>

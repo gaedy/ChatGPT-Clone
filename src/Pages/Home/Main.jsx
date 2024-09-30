@@ -1,17 +1,9 @@
 import React, { useRef } from 'react'
-// import Suggest from './Suggestions/Suggest'
-// import { suggestionsArray } from './Suggestions/suggestionsArray'
 import logo from '/src/assets/icon/logo.svg';
 import Suggest from './Suggestions/Suggest';
 import { suggestionsArray } from './Suggestions/suggestionsArray';
 
-
-
-
-
 function Main() {
-
-
 
   return (
 
@@ -30,12 +22,13 @@ function Main() {
 
         <div className='flex flex-row gap-4 flex-wrap-reverse justify-center items-center w-[95%] px-2 mb-auto'>
 
-          {suggestionsArray.map((suggestion,index) => (
+          {suggestionsArray.map((suggestion,index) => 
+          (
 
             <Suggest
-            text={suggestion.text}
-            icon={suggestion.icon}
-            className={index < 2 && "hidden md:flex"}  
+              text={suggestion.text}
+              icon={suggestion.icon}
+              className={index < 2 && "hidden md:flex"}  
             />
 
           )
