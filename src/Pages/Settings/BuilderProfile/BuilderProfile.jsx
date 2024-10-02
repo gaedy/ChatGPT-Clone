@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function BuilderProfile() {
-  return (
-    <div>Builder Profile</div>
-  )
+  return <div>Builder Profile</div>;
 }
 
-export default BuilderProfile
+export default BuilderProfile;
