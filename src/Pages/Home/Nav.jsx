@@ -139,6 +139,7 @@ function Nav({ toggleSidebarButton, isSidebarOpen }) {
             <PopBox isOpen={isPopupChatOpen} refProp={priceRef} />
           </div>
         </div>
+
         <div
           className="hover:bg-ahHoverColor p-2 rounded-full ml-auto cursor-pointer bg-none relative 
                 transition-all hidden md:flex"
@@ -149,8 +150,9 @@ function Nav({ toggleSidebarButton, isSidebarOpen }) {
             src={profile}
             className="w-6 min-w-6 scale-125 pointer-events-none"
           ></img>
-          <PopBox2 isOpen={isProfileOpen} refProp={profileRef}></PopBox2>
+          <PopBox2 isOpen={isProfileOpen} refProp={profileRef} />
         </div>
+
       </div>
     </>
   );

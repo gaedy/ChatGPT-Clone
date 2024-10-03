@@ -1,7 +1,17 @@
-import React from "react";
+import { animated, useSpring } from "@react-spring/web";
 
 
 function PopBox3({isOpen, refProp}) {
+
+
+    const animation = useSpring({
+        y: isOpen ? 0: 5,
+        opacity: isOpen ? 1 : 0,
+        config: { mass: 1, clamp: true, friction:15, duration: 200, },
+        delay: isOpen ? 100 : 0,
+    });
+
+
 
     if (!isOpen) {
         return null;
@@ -10,8 +20,7 @@ function PopBox3({isOpen, refProp}) {
 
     return (
 
-        
-
+        <animated.div style={animation}>
             <div className=' relative  bg-ahHoverColor text-ahTextColor00 border border-ahBorderColor shadow-xl -mb-3 md:-left-44 w-svw max-h-fit max-w-xs z-10
             rounded-2xl p-2 flex flex-col' ref={refProp}
             >
@@ -73,6 +82,9 @@ function PopBox3({isOpen, refProp}) {
                     </div>
                 </div>
             </div>
+
+        </animated.div>
+
        
 
     )
