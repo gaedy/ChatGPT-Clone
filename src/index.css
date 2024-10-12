@@ -3,25 +3,24 @@
 @tailwind utilities;
 
 @layer components {
-    .ahBorder1 {
-        @apply border border-rose-600;
-    }
-    .ahBorder2 {
-        @apply border border-sky-600;
-    }
-    .overlay {
-        @apply fixed bg-black opacity-50 z-20 inset-0;
-    }
+  .ahBorder1 {
+    @apply border border-rose-600;
+  }
+  .ahBorder2 {
+    @apply border border-sky-600;
+  }
+  .overlay {
+    @apply fixed bg-black opacity-50 z-20 inset-0;
+  }
 }
-
 
 :root {
-    box-sizing: border-box;
-    background-color:hsl(0, 0%, 15%);
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-weight: 390;
-    
+  box-sizing: border-box;
+  background-color: hsl(0, 0%, 15%);
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 390;
 }
+
 

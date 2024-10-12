@@ -1,4 +1,4 @@
-import React from "react";
+
 import { useState, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import sidebarmobile from "/src/assets/icon/sidebarmobile.svg";
@@ -84,14 +84,14 @@ function Nav({ toggleSidebarButton, isSidebarOpen }) {
         </Tooltip>
       </div>
       {/* Larger Screen */}
-      <div className="md:flex  md:justify-center justify-between items-center m-2 mx-3 select-none hidden">
+      <div className="md:flex  md:justify-center justify-between items-center m-2 mx-3 select-none hidden  ">
         <Tooltip
           text={isSidebarOpen ? "Close Sidebar" : "Open Sidebar"}
           arrow="top"
           arrowClassName="left-5 border-l border-t"
         >
           <div
-            className={`hover:bg-ahHoverColor  p-2 rounded-lg cursor-pointer bg-none transition-all 
+            className={`hover:bg-ahHoverColor  p-2 rounded-lg cursor-pointer bg-none transition-all active:scale-95  
                     ${isSidebarOpen ? "md:hidden visible" : "visible"}`}
             onClick={toggleSidebarButton}
           >
@@ -110,7 +110,7 @@ function Nav({ toggleSidebarButton, isSidebarOpen }) {
         >
           <NavLink to="/">
             <div
-              className={`hover:bg-ahHoverColor p-2 rounded-lg cursor-pointer bg-none transition-all 
+              className={`hover:bg-ahHoverColor p-2 rounded-lg cursor-pointer bg-none transition-all active:scale-95
                         ${isSidebarOpen ? "sm:hidden visible" : "visible"}`}
             >
               <img
@@ -121,9 +121,11 @@ function Nav({ toggleSidebarButton, isSidebarOpen }) {
           </NavLink>
         </Tooltip>
 
+        
+
         <div
           className={`hover:bg-ahHoverColor rounded-lg px-3 py-[6px] text-ahTextColor2 font-medium text-lg
-                flex flex-row select-none cursor-pointer bg-none relative transition-all 
+                flex flex-row select-none cursor-pointer bg-none relative transition-all  
                 ${isPopupChatOpen && "bg-ahHoverColor"}`}
           onClick={toggleChatButton}
           ref={priceBottomRef}
@@ -140,9 +142,10 @@ function Nav({ toggleSidebarButton, isSidebarOpen }) {
           </div>
         </div>
 
+
         <div
           className="hover:bg-ahHoverColor p-2 rounded-full ml-auto cursor-pointer bg-none relative 
-                transition-all hidden md:flex"
+                transition-all duration-500 hidden md:flex active:scale-95"
           onClick={toggleProfileButton}
           ref={profileBottomRef}
         >

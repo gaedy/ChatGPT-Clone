@@ -56,10 +56,13 @@ function App() {
         <Outlet />
       </div>
 
-      <div className={isSidebarOpen && "overlay md:hidden"}></div>
+      <div
+        className={
+          isSidebarOpen && "overlay transition-all duration-300 md:hidden"
+        }
+      ></div>
     </Fragment>
   );
 }
 
 export default App;
-

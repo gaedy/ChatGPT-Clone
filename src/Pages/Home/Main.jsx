@@ -1,5 +1,4 @@
 /* eslint-disable react/jsx-key */
-import React, { useRef } from "react";
 import logo from "/src/assets/icon/logo.svg";
 import Suggest from "./Suggestions/Suggest";
 import { suggestionsArray } from "./Suggestions/suggestionsArray";
@@ -11,7 +10,8 @@ function Main() {
         <div className="w-16 brightness-100 bg-none pointer-events-none mb-[3rem] -z-10 mt-auto">
           <img src={logo} alt="Logo Icon" className=" brightness-90"></img>
         </div>
-        <div className="flex flex-row gap-4 flex-wrap-reverse justify-center items-center w-[95%] px-2 mb-auto">
+
+        <div className="flex flex-row gap-4 flex-wrap-reverse justify-center items-center w-[95%] px-2 mb-auto relative">
           {suggestionsArray.map((suggestion, index) => (
             <Suggest
               text={suggestion.text}

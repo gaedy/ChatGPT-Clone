@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { animated, useSpring } from "@react-spring/web";
 
 function Tooltip({
   text,
@@ -27,6 +28,12 @@ function Tooltip({
     setIsVisible(false);
   };
 
+  const animation = useSpring({
+    delay: isVisible ? 300 : 0,
+    opacity: isVisible ? 2 : 0,
+    config: { mass: 1, clamp: true },
+  });
+
   return (
     <>
       <div
@@ -37,15 +44,16 @@ function Tooltip({
       >
         {children}
         {isVisible && (
-          <div
+          <animated.div
+            style={animation}
             className={`absolute ${className} bg-ahBackColor3 border-ahBorderColor border rounded-lg mt-3 invisible group-hover:visible opacity-0 group-hover:opacity-100
-                             text-ahTextColor top-full p-2 text-sm w-auto text-nowrap text-center shadow-md `}
+             text-ahTextColor top-full p-2 text-sm w-auto text-nowrap text-center shadow-md `}
           >
             {text}
             <div
               className={`absolute ${arrowPosition[arrow]} ${arrowClassName} border-ahBorderColor  bg-ahBackColor3 rotate-45`}
             ></div>
-          </div>
+          </animated.div>
         )}
       </div>
     </>

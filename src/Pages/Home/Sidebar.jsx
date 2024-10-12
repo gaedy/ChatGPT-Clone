@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import React from "react";
 // import Tooltip from './Tooltip'
 // import Item from './Items/Item'
@@ -16,7 +17,7 @@ function Sidebar({ toggleSidebarButton }) {
   return (
     <>
       <div className="bg-ahBackColor2 absolute h-full w-full flex flex-col justify-start py-2 px-2= p-2 text-sm text-ahTextColor00 border-r border-ahBorderColor border-opacity-50 shadow-lg select-none ">
-        <div className="flex flex-row justify-between mx-1 ">
+        <div className="flex flex-row justify-between mx-1  ">
           <Tooltip
             text="Close Sidebar"
             className="translate-x-14 -translate-y-12"
@@ -24,7 +25,7 @@ function Sidebar({ toggleSidebarButton }) {
             arrowClassName="border-b border-l"
           >
             <div
-              className="hover:bg-ahBackColor p-2 rounded-lg cursor-pointer"
+              className="hover:bg-ahBackColor p-2 rounded-lg cursor-pointer active:scale-95"
               onClick={toggleSidebarButton}
             >
               <img
@@ -44,7 +45,7 @@ function Sidebar({ toggleSidebarButton }) {
             className="-translate-x-24 -translate-y-12"
             arrowClassName="left-[6px] border-t border-r"
           >
-            <div className="hover:bg-ahBackColor p-2 rounded-lg cursor-pointer">
+            <div className="hover:bg-ahBackColor p-2 rounded-lg cursor-pointer active:scale-95">
               <img
                 src={newchat}
                 className="w-6 pointer-events-none brightness-75"
