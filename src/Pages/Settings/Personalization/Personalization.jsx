@@ -1,5 +1,4 @@
-import React from "react";
-import down from "/src/assets/icon/down.svg";
+import down from "/icon/down.svg";
 
 function Personalization() {
   return (
@@ -45,7 +44,7 @@ function Personalization() {
           Manage
         </div>
         <div className="hover:bg-red-600 bg-red-500 py-2 px-5 border border-ahBorderColor rounded-full cursor-pointer">
-          Clear ChatGPT's memory
+          Clear ChatGPT&apos;s memory
         </div>
       </div>
     </div>

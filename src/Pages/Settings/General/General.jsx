@@ -1,6 +1,6 @@
 import React from "react";
 // import { useParams } from 'react-router-dom'
-import down from "/src/assets/icon/down.svg";
+import down from "/icon/down.svg";
 
 function General() {
   return (

@@ -1,7 +1,8 @@
 import { animated, easings, useSpring } from "@react-spring/web";
 import { NavLink } from "react-router-dom";
-
-
+import chat2 from "/icon/chat2.svg";
+import chat1 from "/icon/chat1.svg";
+import tempchat from "/icon/tempchat.svg";
 function PopBox({ isOpen, refProp }) {
 
   const animation = useSpring({
@@ -27,7 +28,7 @@ function PopBox({ isOpen, refProp }) {
           <div className="hover:bg-ahBorderColor cursor-pointer h-[40%] rounded-lg p-3 flex flex-row justify-between items-center">
             <div>
               <img
-                src="src/assets/icon/chat2.svg"
+                src={chat2}
                 className="w-6 mr-3 brightness-90"
               ></img>
             </div>
@@ -47,7 +48,7 @@ function PopBox({ isOpen, refProp }) {
 
         <div className="hover:bg-ahBorderColor cursor-pointer h-[40%] rounded-lg p-3 flex flex-row justify-between items-center">
           <img
-            src="src/assets/icon/chat1.svg"
+            src={chat1}
             className="w-6 mr-3 brightness-90"
           ></img>
           <div className="mr-auto">
@@ -60,7 +61,7 @@ function PopBox({ isOpen, refProp }) {
 
         <div className="hover:bg-ahBorderColor cursor-pointer h-[25%] rounded-lg p-3  flex flex-row justify-between items-center">
           <img
-            src="src/assets/icon/tempchat.svg"
+            src={tempchat}
             className="w-6 mr-3 scale-150 brightness-150"
           ></img>
           <div className="mr-auto">

@@ -1,5 +1,4 @@
-import React from "react";
-import down from "/src/assets/icon/down.svg";
+import down from "/icon/down.svg";
 
 function DataControl() {
   return (

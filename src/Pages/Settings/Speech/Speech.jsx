@@ -1,6 +1,5 @@
-import React from "react";
-import down from "/src/assets/icon/down.svg";
-import play from "/src/assets/icon/play.svg";
+import down from "/icon/down.svg";
+import play from "/icon/play.svg";
 
 function Speech() {
   return (

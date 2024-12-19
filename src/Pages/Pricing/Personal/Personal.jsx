@@ -1,7 +1,6 @@
-import React from "react";
-import check from "/src/assets/icon/check.svg";
-import starfree from "/src/assets/icon/starfree.svg";
-import starplus from "/src/assets/icon/starplus.svg";
+import check from "/icon/check.svg";
+import starfree from "/icon/starfree.svg";
+import starplus from "/icon/starplus.svg";
 
 function Personal() {
   return (

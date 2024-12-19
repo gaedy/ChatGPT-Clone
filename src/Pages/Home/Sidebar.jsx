@@ -1,14 +1,14 @@
 /* eslint-disable react/jsx-key */
-import React from "react";
+
 // import Tooltip from './Tooltip'
 // import Item from './Items/Item'
 // import { itemsArray } from './Items/itemsArray'
-import sidebar1 from "/src/assets/icon/sidebar1.svg";
-import sidebarmobile from "/src/assets/icon/sidebarmobile.svg";
-import newchat from "/src/assets/icon/newchat.svg";
-import logo from "/src/assets/icon/logo.svg";
-import menu from "/src/assets/icon/menu.svg";
-import chatgptplus from "/src/assets/icon/chatgptplus.svg";
+import sidebar1 from "/icon/sidebar1.svg";
+import sidebarmobile from "/icon/sidebarmobile.svg";
+import newchat from "/icon/newchat.svg";
+import logo from "/icon/logo.svg";
+import menu from "/icon/menu.svg";
+import chatgptplus from "/icon/chatgptplus.svg";
 import Tooltip from "../../components/Tooltip";
 import Item from "./Items/Item";
 import { itemsArray } from "./Items/itemsArray";

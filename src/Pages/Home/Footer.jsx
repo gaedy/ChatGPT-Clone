@@ -1,7 +1,6 @@
-import React from "react";
 import { useState, useRef } from "react";
-import attach from "/src/assets/icon/attach.svg";
-import upload from "/src/assets/icon/upload.svg";
+import attach from "/icon/attach.svg";
+import upload from "/icon/upload.svg";
 import Tooltip from "../../components/Tooltip";
 import PopBox3 from "../../components/PopBox3";
 import useClickOutside from "../../Hooks/useClickOutside";

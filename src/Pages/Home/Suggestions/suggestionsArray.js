@@ -1,7 +1,7 @@
-import sugg1 from '/src/assets/icon/sugg1.svg';
-import sugg2 from '/src/assets/icon/sugg2.svg';
-import sugg3 from '/src/assets/icon/sugg3.svg';
-import sugg4 from '/src/assets/icon/sugg4.svg';
+import sugg1 from '/icon/sugg1.svg';
+import sugg2 from '/icon/sugg2.svg';
+import sugg3 from '/icon/sugg3.svg';
+import sugg4 from '/icon/sugg4.svg';
 export const suggestionsArray = [
 
 

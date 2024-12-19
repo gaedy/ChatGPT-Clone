@@ -1,5 +1,5 @@
-import React, { Fragment } from "react";
-import { Outlet, NavLink, Route, Routes, Navigate } from "react-router-dom";
+import { Fragment } from "react";
+import { NavLink, Route, Routes, Navigate } from "react-router-dom";
 import General from "./General/General";
 import Personalization from "./Personalization/Personalization";
 import Speech from "./Speech/Speech";
@@ -8,7 +8,7 @@ import BuilderProfile from "./BuilderProfile/BuilderProfile";
 import ConnectApps from "./ConnectApps/ConnectApps";
 import Security from "./Security/Security";
 import Tooltip from "../../components/Tooltip";
-import closelogo from "/src/assets/icon/close.svg";
+import closelogo from "/icon/close.svg";
 
 export const settingsArray = [
   { path: "general", name: "General" },

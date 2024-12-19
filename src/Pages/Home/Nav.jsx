@@ -1,11 +1,11 @@
 
 import { useState, useRef } from "react";
 import { NavLink } from "react-router-dom";
-import sidebarmobile from "/src/assets/icon/sidebarmobile.svg";
-import down from "/src/assets/icon/down.svg";
-import newchat from "/src/assets/icon/newchat.svg";
-import sidebar1 from "/src/assets/icon/sidebar1.svg";
-import profile from "/src/assets/icon/profile.svg";
+import sidebarmobile from "/icon/sidebarmobile.svg";
+import down from "/icon/down.svg";
+import newchat from "/icon/newchat.svg";
+import sidebar1 from "/icon/sidebar1.svg";
+import profile from "/icon/profile.svg";
 import Tooltip from "../../components/Tooltip";
 import PopBox2 from "../../components/PopBox2";
 import PopBox from "../../components/PopBox";

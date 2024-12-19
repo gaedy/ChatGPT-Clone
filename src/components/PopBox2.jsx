@@ -1,12 +1,11 @@
+/* eslint-disable react/prop-types */
 import { animated, useSpring } from "@react-spring/web";
 import { NavLink } from "react-router-dom";
-import user2 from "/src/assets/icon/user2.svg";
-import user1 from "/src/assets/icon/user1.svg";
-import settings from "/src/assets/icon/settings.svg";
-import star from "/src/assets/icon/star.svg";
-import logout from "/src/assets/icon/logout.svg";
-// import { memo, useCallback } from "react";
-
+import user2 from "/icon/user2.svg";
+import user1 from "/icon/user1.svg";
+import settings from "/icon/settings.svg";
+import star from "/icon/star.svg";
+import logout from "/icon/logout.svg";
 
 function PopBox2({ isOpen, refProp }) {
   const animation = useSpring({

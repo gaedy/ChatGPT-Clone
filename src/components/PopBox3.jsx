@@ -27,7 +27,7 @@ function PopBox3({isOpen, refProp}) {
                 
                 <div className='hover:bg-ahBorderColor cursor-pointer h-fit rounded-lg p-3 flex flex-row justify-between items-center'>
                     <div>
-                        <img src='src/assets/icon/googledrive.svg' className='w-6 mr-3 scale-90'></img>
+                        <img src='/icon/googledrive.svg' className='w-6 mr-3 scale-90'></img>
                     </div>
 
                     <div className='mr-auto'>
@@ -39,11 +39,11 @@ function PopBox3({isOpen, refProp}) {
 
 
                 <div className=' hover:bg-ahBorderColor  h-fit rounded-lg p-3 md:flex flex-row justify-between items-center relative group cursor-pointer hidden'>
-                    <img src='src/assets/icon/onedrive.svg' className='w-6 mr-3 scale-90 '></img>
+                    <img src='/icon/onedrive.svg' className='w-6 mr-3 scale-90 '></img>
                         <div className='mr-auto'>
                             <p className='text-sm'>Connect to Microsoft OneDrive</p>
                         </div>
-                    <img src="src/assets/icon/down.svg" className="w-6 scale-75 -rotate-90 hidden md:flex"></img>
+                    <img src="/icon/down.svg" className="w-6 scale-75 -rotate-90 hidden md:flex"></img>
 
 
                     <div className="absolute bg-ahHoverColor border border-ahBorderColor p-2 rounded-xl right-0 top-0 translate-x-64 w-fit h-28  shadow-lg flex-col justify-center hidden md:group-hover:flex">
@@ -55,7 +55,7 @@ function PopBox3({isOpen, refProp}) {
                 </div>
 
                 <div className=' hover:bg-ahBorderColor  h-fit rounded-lg p-3 flex flex-row justify-between items-center relative group cursor-pointer md:hidden'>
-                    <img src='src/assets/icon/onedrive.svg' className='w-6 mr-3 scale-90 '></img>
+                    <img src='/icon/onedrive.svg' className='w-6 mr-3 scale-90 '></img>
                         <div className='mr-auto'>
                             <p className='text-sm'>Microsoft OneDrive - Personal</p>
                         </div>
@@ -63,7 +63,7 @@ function PopBox3({isOpen, refProp}) {
                 </div>
 
                 <div className=' hover:bg-ahBorderColor  h-fit rounded-lg p-3 flex flex-row justify-between items-center relative group cursor-pointer md:hidden'>
-                    <img src='src/assets/icon/onedrive.svg' className='w-6 mr-3 scale-90 '></img>
+                    <img src='/icon/onedrive.svg' className='w-6 mr-3 scale-90 '></img>
                         <div className='mr-auto'>
                             <p className='text-sm'>Microsoft OneDrive - Work/School</p>
                         </div>
@@ -76,7 +76,7 @@ function PopBox3({isOpen, refProp}) {
             <hr className='w-[90%] border-1 m-1 flex justify-center self-center opacity-10'></hr>
 
                 <div className='hover:bg-ahBorderColor cursor-pointer h-fit rounded-lg p-3  flex flex-row justify-between items-center'>
-                    <img src='src/assets/icon/fileupload.svg' className='w-6 mr-3 scale-100 brightness-150'></img>
+                    <img src='/icon/fileupload.svg' className='w-6 mr-3 scale-100 brightness-150'></img>
                     <div className='mr-auto'>
                         <p className='text-sm'>Upload from Computer</p>
                     </div>

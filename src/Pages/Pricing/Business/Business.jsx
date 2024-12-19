@@ -1,7 +1,7 @@
-import React from "react";
-import check from "/src/assets/icon/check.svg";
 
-import teams from "/src/assets/icon/teams.svg";
+import check from "/icon/check.svg";
+import teams from "/icon/teams.svg";
+
 function Business() {
   return (
     <div className=" flex flex-col md:flex-row justify-center items-center gap-4 py-4 md:px-10">

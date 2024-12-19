@@ -1,4 +1,3 @@
-import React from "react";
 
 function Suggest({ text, icon, className = "" }) {
   return (

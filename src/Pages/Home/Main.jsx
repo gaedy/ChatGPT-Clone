@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-key */
-import logo from "/src/assets/icon/logo.svg";
+import logo from "/icon/logo.svg";
 import Suggest from "./Suggestions/Suggest";
 import { suggestionsArray } from "./Suggestions/suggestionsArray";
 

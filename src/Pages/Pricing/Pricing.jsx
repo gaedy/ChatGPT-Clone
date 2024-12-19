@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { Outlet, NavLink } from "react-router-dom";
-import close from "/src/assets/icon/close.svg";
+import close from "/icon/close.svg";
 
 function Pricing() {
   return (
