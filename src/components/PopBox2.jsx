@@ -1,11 +1,13 @@
 /* eslint-disable react/prop-types */
 import { animated, useSpring } from "@react-spring/web";
 import { NavLink } from "react-router-dom";
-import user2 from "/icon/user2.svg";
-import user1 from "/icon/user1.svg";
-import settings from "/icon/settings.svg";
-import star from "/icon/star.svg";
-import logout from "/icon/logout.svg";
+import {
+  Bolt,
+  LogOut,
+  UserRoundPen,
+  UserRoundSearch,
+  WandSparkles,
+} from "lucide-react";
 
 function PopBox2({ isOpen, refProp }) {
   const animation = useSpring({
@@ -27,11 +29,8 @@ function PopBox2({ isOpen, refProp }) {
         ref={refProp}
       >
         <div className="hover:bg-ahBorderColor cursor-pointer rounded-lg p-3 flex flex-row justify-between items-center">
-          <div>
-            <img
-              src={user2}
-              className="w-6 mr-3 scale-150 brightness-110"
-            ></img>
+          <div className="pr-3 brightness-90 ">
+            <UserRoundSearch size={20} />
           </div>
           <div className="mr-auto">
             <p className="text-sm">My GPTs</p>
@@ -39,7 +38,9 @@ function PopBox2({ isOpen, refProp }) {
         </div>
 
         <div className="hover:bg-ahBorderColor cursor-pointer rounded-lg p-3 flex flex-row justify-between items-center">
-          <img src={user1} className="w-6 mr-3 scale-150 brightness-110"></img>
+          <div className="pr-3 brightness-90 ">
+            <UserRoundPen size={20} />
+          </div>
           <div className="mr-auto">
             <p className="text-sm">Customize ChatGPT</p>
           </div>
@@ -47,10 +48,9 @@ function PopBox2({ isOpen, refProp }) {
 
         <NavLink to="/settings">
           <div className="hover:bg-ahBorderColor cursor-pointer rounded-lg p-3 flex flex-row justify-between items-center">
-            <img
-              src={settings}
-              className="w-6 mr-3 scale-150 brightness-110"
-            ></img>
+            <div className="pr-3 brightness-90 ">
+              <Bolt size={20} />
+            </div>
             <div className="mr-auto">
               <p className="text-sm">Settings</p>
             </div>
@@ -61,10 +61,9 @@ function PopBox2({ isOpen, refProp }) {
 
         <NavLink to="/pricing">
           <div className="hover:bg-ahBorderColor cursor-pointer rounded-lg p-3  flex flex-row justify-between items-center">
-            <img
-              src={star}
-              className="w-6 p-1 mr-3 scale-90 brightness-90"
-            ></img>
+            <div className="pr-3 brightness-90 ">
+              <WandSparkles size={20} />
+            </div>
             <div className="mr-auto">
               <p className="text-sm">Upgrade Plan</p>
             </div>
@@ -74,7 +73,9 @@ function PopBox2({ isOpen, refProp }) {
         <hr className="w-[90%] border-1 m-1 flex justify-center self-center opacity-10"></hr>
 
         <div className="hover:bg-ahBorderColor cursor-pointer  rounded-lg p-3  flex flex-row justify-between items-center">
-          <img src={logout} className="w-6 mr-3 scale-150 brightness-110"></img>
+          <div className="pr-3 brightness-90 ">
+            <LogOut size={20} />
+          </div>{" "}
           <div className="mr-auto">
             <p className="text-sm">Log Out</p>
           </div>

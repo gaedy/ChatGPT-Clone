@@ -1,22 +1,18 @@
 import { animated, easings, useSpring } from "@react-spring/web";
 import { NavLink } from "react-router-dom";
-import chat2 from "/icon/chat2.svg";
-import chat1 from "/icon/chat1.svg";
-import tempchat from "/icon/tempchat.svg";
+import { MessageCircleDashed, Sparkle, Sparkles } from "lucide-react";
 function PopBox({ isOpen, refProp }) {
-
   const animation = useSpring({
     y: isOpen ? 0 : -5,
     opacity: isOpen ? 1 : 0,
-    config: { mass: 1, easing: easings.steps(5),clamp:true, friction:15 },
+    config: { mass: 1, easing: easings.steps(5), clamp: true, friction: 15 },
     delay: isOpen ? 100 : 0,
   });
 
-    
   if (!isOpen) {
     return null;
   }
-  
+
   return (
     <animated.div style={animation}>
       <div
@@ -26,11 +22,8 @@ function PopBox({ isOpen, refProp }) {
       >
         <NavLink to="/pricing">
           <div className="hover:bg-ahBorderColor cursor-pointer h-[40%] rounded-lg p-3 flex flex-row justify-between items-center">
-            <div>
-              <img
-                src={chat2}
-                className="w-6 mr-3 brightness-90"
-              ></img>
+            <div className="pr-3 brightness-90 ">
+              <Sparkles size={21} />
             </div>
             <div className="mr-auto">
               <p className="text-sm">ChatGPT Plus</p>
@@ -47,29 +40,28 @@ function PopBox({ isOpen, refProp }) {
         </NavLink>
 
         <div className="hover:bg-ahBorderColor cursor-pointer h-[40%] rounded-lg p-3 flex flex-row justify-between items-center">
-          <img
-            src={chat1}
-            className="w-6 mr-3 brightness-90"
-          ></img>
+          <div className="pr-3 brightness-90 ">
+            <Sparkle size={21} />
+          </div>
           <div className="mr-auto">
             <p className="text-sm">ChatGPT</p>
-            <p className="text-xs text-ahTextColor2">Great for everyday tasks</p>
+            <p className="text-xs text-ahTextColor2">
+              Great for everyday tasks
+            </p>
           </div>
         </div>
 
         <hr className="w-[90%] border-1 m-1 flex justify-center self-center opacity-10"></hr>
 
         <div className="hover:bg-ahBorderColor cursor-pointer h-[25%] rounded-lg p-3  flex flex-row justify-between items-center">
-          <img
-            src={tempchat}
-            className="w-6 mr-3 scale-150 brightness-150"
-          ></img>
+          <div className="pr-3 brightness-90 ">
+            <MessageCircleDashed size={21} />
+          </div>
           <div className="mr-auto">
             <p className="text-sm">Temporary Chat</p>
           </div>
         </div>
       </div>
-
     </animated.div>
   );
 }

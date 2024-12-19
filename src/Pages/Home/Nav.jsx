@@ -1,15 +1,16 @@
-
 import { useState, useRef } from "react";
 import { NavLink } from "react-router-dom";
-import sidebarmobile from "/icon/sidebarmobile.svg";
 import down from "/icon/down.svg";
-import newchat from "/icon/newchat.svg";
-import sidebar1 from "/icon/sidebar1.svg";
-import profile from "/icon/profile.svg";
 import Tooltip from "../../components/Tooltip";
 import PopBox2 from "../../components/PopBox2";
 import PopBox from "../../components/PopBox";
 import useClickOutside from "../../Hooks/useClickOutside";
+import {
+  CircleUserRound,
+  Menu,
+  PanelRightClose,
+  SquarePen,
+} from "lucide-react";
 
 function Nav({ toggleSidebarButton, isSidebarOpen }) {
   const priceRef = useRef();
@@ -41,10 +42,7 @@ function Nav({ toggleSidebarButton, isSidebarOpen }) {
                 ${isSidebarOpen ? "md:hidden visible" : "visible"}`}
           onClick={toggleSidebarButton}
         >
-          <img
-            src={sidebarmobile}
-            className="w-6 min-w-6 brightness-75 pointer-events-none"
-          />
+          <Menu size={24} color="white" className="brightness-75" />
         </div>
 
         <div
@@ -76,10 +74,7 @@ function Nav({ toggleSidebarButton, isSidebarOpen }) {
             className={`hover:bg-ahHoverColor p-2 rounded-lg cursor-pointer bg-none transition-all 
                     ${isSidebarOpen ? "md:hidden visible" : "visible"}`}
           >
-            <img
-              src={newchat}
-              className="w-6 min-w-6 pointer-events-none brightness-75"
-            />
+            <SquarePen color="white" className="brightness-75" />
           </div>
         </Tooltip>
       </div>
@@ -95,10 +90,7 @@ function Nav({ toggleSidebarButton, isSidebarOpen }) {
                     ${isSidebarOpen ? "md:hidden visible" : "visible"}`}
             onClick={toggleSidebarButton}
           >
-            <img
-              src={sidebar1}
-              className="w-6 min-w-6 pointer-events-none brightness-75"
-            />
+            <PanelRightClose color="white" className="brightness-75" />
           </div>
         </Tooltip>
 
@@ -113,15 +105,10 @@ function Nav({ toggleSidebarButton, isSidebarOpen }) {
               className={`hover:bg-ahHoverColor p-2 rounded-lg cursor-pointer bg-none transition-all active:scale-95
                         ${isSidebarOpen ? "sm:hidden visible" : "visible"}`}
             >
-              <img
-                src={newchat}
-                className="w-6 min-w-6 pointer-events-none brightness-75"
-              />
+              <SquarePen color="white" className="brightness-75" />
             </div>
           </NavLink>
         </Tooltip>
-
-        
 
         <div
           className={`hover:bg-ahHoverColor rounded-lg px-3 py-[6px] text-ahTextColor2 font-medium text-lg
@@ -142,20 +129,15 @@ function Nav({ toggleSidebarButton, isSidebarOpen }) {
           </div>
         </div>
 
-
         <div
           className="hover:bg-ahHoverColor p-2 rounded-full ml-auto cursor-pointer bg-none relative 
                 transition-all duration-500 hidden md:flex active:scale-95"
           onClick={toggleProfileButton}
           ref={profileBottomRef}
         >
-          <img
-            src={profile}
-            className="w-6 min-w-6 scale-125 pointer-events-none"
-          ></img>
+          <CircleUserRound color="white" className="brightness-75" />
           <PopBox2 isOpen={isProfileOpen} refProp={profileRef} />
         </div>
-
       </div>
     </>
   );
