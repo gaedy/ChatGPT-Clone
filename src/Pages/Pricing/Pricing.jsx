@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import { Outlet, NavLink } from "react-router-dom";
 import close from "/icon/close.svg";
+import { X } from "lucide-react";
 
 function Pricing() {
   return (
@@ -8,10 +9,9 @@ function Pricing() {
       <div className="flex absolute h-full overflow-y-auto w-full flex-col justify-start items-center gap-4 text-ahTextColor00 bg-ahHoverColor">
         <div className=" absolute md:right-10 right-8 md:top-8 top-6">
           <NavLink to="/">
-            <img
-              src={close}
-              className="w-8 p-1 cursor-pointer  brightness-75 rounded-full hover:bg-ahBackColor hover:brightness-100"
-            ></img>
+            <div className="hover:bg-ahBorderColor cursor-pointer rounded-full p-2">
+              <X className="p-0.5" />
+            </div>
           </NavLink>
         </div>
 

@@ -4,11 +4,12 @@ import upload from "/icon/upload.svg";
 import Tooltip from "../../components/Tooltip";
 import PopBox3 from "../../components/PopBox3";
 import useClickOutside from "../../Hooks/useClickOutside";
+import { ArrowUp, Link2 } from "lucide-react";
 
 function Footer() {
   const [isAttachOpen, setIsAttachOpen] = useState(false);
   const [isInput, setIsInput] = useState("");
-  const [isSubmit, setIsSubmit] = useState('');
+  const [isSubmit, setIsSubmit] = useState("");
 
   const itemRef = useRef();
   const buttonRef = useRef();
@@ -20,7 +21,6 @@ function Footer() {
   function handleInput(e) {
     setIsInput(e.target.value);
   }
-
 
   useClickOutside(toggleAttachButtom, itemRef, buttonRef);
 
@@ -43,11 +43,7 @@ function Footer() {
               onClick={toggleAttachButtom}
               ref={buttonRef}
             >
-              <img
-                className="pointer-events-none"
-                src={attach}
-                alt="Attach file"
-              />
+              <Link2 color="white" />
             </div>
           </Tooltip>
 
@@ -60,16 +56,9 @@ function Footer() {
             onChange={handleInput}
           />
 
-          
-            <img
-              className="w-8 mr-3 opacity-30 pointer-events-none select-none"
-              src={upload}
-              alt="Link"
-              
-              
-            />
-          
-
+          <div className="bg-white opacity-30 rounded-full p-1.5 mr-2">
+            <ArrowUp className="p-0.5" />
+          </div>
         </form>
 
         <div className="absolute bottom-full w-full flex justify-center">

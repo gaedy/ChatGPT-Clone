@@ -12,6 +12,14 @@ import chatgptplus from "/icon/chatgptplus.svg";
 import Tooltip from "../../components/Tooltip";
 import Item from "./Items/Item";
 import { itemsArray } from "./Items/itemsArray";
+import {
+  LayoutGrid,
+  Menu,
+  PanelRightOpen,
+  Sparkle,
+  Sparkles,
+  SquarePen,
+} from "lucide-react";
 
 function Sidebar({ toggleSidebarButton }) {
   return (
@@ -28,14 +36,16 @@ function Sidebar({ toggleSidebarButton }) {
               className="hover:bg-ahBackColor p-2 rounded-lg cursor-pointer active:scale-95"
               onClick={toggleSidebarButton}
             >
-              <img
-                src={sidebar1}
-                className="w-6 pointer-events-none md:flex hidden brightness-75"
-              ></img>
-              <img
-                src={sidebarmobile}
-                className="w-6 pointer-events-none md:hidden brightness-75"
-              ></img>
+              <PanelRightOpen
+                color="white"
+                className="brightness-75 hidden md:flex"
+              />
+
+              <Menu
+                size={24}
+                color="white"
+                className="brightness-75 md:hidden"
+              />
             </div>
           </Tooltip>
 
@@ -46,10 +56,7 @@ function Sidebar({ toggleSidebarButton }) {
             arrowClassName="left-[6px] border-t border-r"
           >
             <div className="hover:bg-ahBackColor p-2 rounded-lg cursor-pointer active:scale-95">
-              <img
-                src={newchat}
-                className="w-6 pointer-events-none brightness-75"
-              ></img>
+              <SquarePen color="white" className="brightness-75" />
             </div>
           </Tooltip>
         </div>
@@ -57,21 +64,22 @@ function Sidebar({ toggleSidebarButton }) {
         {/* Middle */}
 
         <div className=" overflow-y-auto overflow-clip mt-4 h-full">
-          <div className="h-10 hover:bg-ahBackColor rounded-lg mt-0 p-2 mx-1 mr-2 flex flex-row items-center text-sm cursor-pointer group">
-            <img
-              src={logo}
-              className="w-6 scale-75 mr-2 pointer-events-none"
-            ></img>
+          <div className="h-10 hover:bg-ahBackColor rounded-lg mt-0 p-2 mx-1 flex flex-row items-center text-sm cursor-pointer group">
+            <Sparkle size={18} color="white" className="brightness-75 mr-2" />
             <div>ChatGPT</div>
 
-            <img
-              src={newchat}
-              className="w-6 scale-[70%] brightness-75  hover:brightness-100 ml-auto hidden group-hover:flex"
-            ></img>
+            <SquarePen
+              color="white"
+              className="brightness-75 p-1 hover:brightness-100 ml-auto hidden group-hover:flex"
+            />
           </div>
 
-          <div className="h-10 hover:bg-ahBackColor rounded-lg p-2 mx-1 mr-2 flex flex-row items-center text-sm cursor-pointer">
-            <img src={menu} className="w-6 scale-75 mr-2 brightness-75"></img>
+          <div className="h-10 hover:bg-ahBackColor rounded-lg p-2 mx-1 flex flex-row items-center text-sm cursor-pointer">
+            <LayoutGrid
+              size={18}
+              color="white"
+              className="brightness-75 mr-2"
+            />
             <div>Explore GPTs</div>
           </div>
 
@@ -82,11 +90,8 @@ function Sidebar({ toggleSidebarButton }) {
           </div>
         </div>
 
-        <div className=" p-2 h-14 mx-1 mt-2 hover:bg-ahBackColor rounded-lg flex flex-row justify-start cursor-pointer">
-          <img
-            src={chatgptplus}
-            className="w-6 scale-75 brightness-75 mr-2 "
-          ></img>
+        <div className=" p-2 h-14 mx-1 mt-2 hover:bg-ahBackColor rounded-lg flex flex-row items-center justify-start cursor-pointer">
+          <Sparkles size={18} color="white" className="brightness-75 mr-2" />
 
           <div className="flex flex-col justify-center items-start">
             <p>Upgrade Plan</p>

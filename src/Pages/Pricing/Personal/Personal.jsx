@@ -1,13 +1,15 @@
-import check from "/icon/check.svg";
-import starfree from "/icon/starfree.svg";
-import starplus from "/icon/starplus.svg";
+import { Check } from "lucide-react";
+
+import { StarFree, StarPlus } from "../../../assets/iconsJSX/icons";
 
 function Personal() {
   return (
     <div className=" flex flex-col md:flex-row justify-center items-center gap-4 py-4 md:px-4 ">
       <div className="border border-ahBorderColor shrink-0 w-11/12 md:w-[50%] md:min-w-80 h-[26rem] md:h-[28rem] rounded-xl p-6 flex flex-col justify-start">
         <div className="flex items-start">
-          <img src={starfree} className="w-6 scale-[85%] mr-2"></img>
+          <div className="mr-2">
+            <StarFree />
+          </div>
           <div className="text-lg font-semibold">Free</div>
         </div>
 
@@ -20,31 +22,31 @@ function Personal() {
         </div>
 
         <div className="text-[13px] flex flex-col gap-1">
-          <div className="flex items-start">
-            <img src={check} className="w-6 scale-[60%] mr-2"></img>
+          <div className="flex items-center">
+            <Check size={17} className="scale-90 mr-2" />
             <div>Assistance with writing, problem solving and more</div>
           </div>
 
-          <div className="flex items-start">
-            <img src={check} className="w-6 scale-[60%] mr-2"></img>
+          <div className="flex items-center">
+            <Check size={17} className="scale-90 mr-2" />
             <div>Access to GPT-4o mini</div>
           </div>
 
-          <div className="flex items-start">
-            <img src={check} className="w-6 scale-[60%] mr-2"></img>
+          <div className="flex items-center">
+            <Check size={17} className="scale-90 mr-2" />
             <div>Limited access to GPT-4o</div>
           </div>
 
-          <div className="flex items-start">
-            <img src={check} className="w-6 scale-[60%] mr-2"></img>
+          <div className="flex items-center flex-shrink">
+            <Check size={17} className="scale-90 mr-2 shrink-0" />
             <div>
               Limited access to data analysis, file uploads, vision, web
               browsing, and image generation
             </div>
           </div>
 
-          <div className="flex items-start">
-            <img src={check} className="w-6 scale-[60%] mr-2"></img>
+          <div className="flex items-center">
+            <Check size={17} className="scale-90 mr-2" />
             <div>Use custom GPTs</div>
           </div>
         </div>
@@ -56,7 +58,11 @@ function Personal() {
 
       <div className="border border-ahBorderColor shrink-0 w-11/12 md:w-[50%] md:min-w-80 h-[28rem] rounded-xl p-6 flex flex-col justify-start">
         <div className="flex items-start">
-          <img src={starplus} className="w-6 scale-[115%] mr-2"></img>
+          <div className="mr-2">
+            {" "}
+            <StarPlus />
+          </div>
+
           <div className="text-lg font-semibold">Plus</div>
         </div>
 
@@ -72,40 +78,40 @@ function Personal() {
         </div>
 
         <div className="text-[13px] flex flex-col gap-1">
-          <div className="flex items-start">
-            <img src={check} className="w-6 scale-[60%] mr-2"></img>
+          <div className="flex items-center ">
+            <Check size={17} className="scale-90 mr-2 shrink-0" />
             <div>Access to OpenAI o1-preview, OpenAI o1-mini</div>
           </div>
 
-          <div className="flex items-start">
-            <img src={check} className="w-6 scale-[60%] mr-2"></img>
+          <div className="flex items-center">
+            <Check size={17} className="scale-90 mr-2 shrink-0" />
             <div>Access to GPT-4o, GPT-4o mini, GPT-4</div>
           </div>
 
-          <div className="flex items-start">
-            <img src={check} className="w-6 scale-[60%] mr-2"></img>
+          <div className="flex items-center">
+            <Check size={17} className="scale-90 mr-2 shrink-0" />
             <div>Up to 5x more messages for GPT-4o</div>
           </div>
 
-          <div className="flex items-start">
-            <img src={check} className="w-6 scale-[60%] mr-2"></img>
+          <div className="flex items-center">
+            <Check size={17} className="scale-90 mr-2 shrink-0" />
             <div>
               Access to data analysis, file uploads, vision, and web browsing
             </div>
           </div>
 
-          <div className="flex items-start">
-            <img src={check} className="w-6 scale-[60%] mr-2"></img>
+          <div className="flex items-center">
+            <Check size={17} className="scale-90 mr-2 shrink-0" />
             <div>DALL·E image generation</div>
           </div>
 
-          <div className="flex items-start">
-            <img src={check} className="w-6 scale-[60%] mr-2"></img>
+          <div className="flex items-center">
+            <Check size={17} className="scale-90 mr-2 shrink-0" />
             <div>Create and use custom GPTs</div>
           </div>
 
-          <div className="flex items-start">
-            <img src={check} className="w-6 scale-[60%] mr-2"></img>
+          <div className="flex items-center">
+            <Check size={17} className="scale-90 mr-2 shrink-0" />
             <div>Early access to new features</div>
           </div>
         </div>

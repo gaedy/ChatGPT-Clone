@@ -1,13 +1,16 @@
-
+import { Check } from "lucide-react";
 import check from "/icon/check.svg";
 import teams from "/icon/teams.svg";
+import { TeamsIcon } from "../../../assets/iconsJSX/icons";
 
 function Business() {
   return (
     <div className=" flex flex-col md:flex-row justify-center items-center gap-4 py-4 md:px-10">
       <div className="border border-ahBorderColor shrink-0 w-11/12 md:w-[30rem] h-[28rem] rounded-xl p-6 flex flex-col justify-start">
         <div className="flex items-start">
-          <img src={teams} className="w-6 scale-[115%] mr-2"></img>
+          <div className="mr-2">
+            <TeamsIcon />
+          </div>
           <div className="text-lg font-semibold">Team</div>
         </div>
 
@@ -23,26 +26,26 @@ function Business() {
         </div>
 
         <div className="text-[13px] flex flex-col gap-1">
-          <div className="flex items-start">
-            <img src={check} className="w-6 scale-[60%] mr-2"></img>
+          <div className="flex items-center">
+            <Check size={17} className="scale-90 mr-2 shrink-0" />
             <div>
               Higher limits for GPT-4, GPT-4o, and tools like DALL·E image
               generation, advanced data analysis, web browsing, and more
             </div>
           </div>
 
-          <div className="flex items-start">
-            <img src={check} className="w-6 scale-[60%] mr-2"></img>
+          <div className="flex items-center">
+            <Check size={17} className="scale-90 mr-2 shrink-0" />
             <div>Create and share GPTs with your workspace</div>
           </div>
 
-          <div className="flex items-start">
-            <img src={check} className="w-6 scale-[60%] mr-2"></img>
+          <div className="flex items-center">
+            <Check size={17} className="scale-90 mr-2 shrink-0" />
             <div>Admin console for workspace management</div>
           </div>
 
-          <div className="flex items-start">
-            <img src={check} className="w-6 scale-[60%] mr-2"></img>
+          <div className="flex items-center">
+            <Check size={17} className="scale-90 mr-2 shrink-0" />
             <div>Team data excluded from training by default.</div>
           </div>
         </div>

@@ -8,16 +8,40 @@ import BuilderProfile from "./BuilderProfile/BuilderProfile";
 import ConnectApps from "./ConnectApps/ConnectApps";
 import Security from "./Security/Security";
 import Tooltip from "../../components/Tooltip";
-import closelogo from "/icon/close.svg";
+
+import {
+  AudioLines,
+  BoltIcon,
+  BookUser,
+  Database,
+  LayoutGrid,
+  Shield,
+  ShieldCheck,
+  UserRoundSearch,
+  X,
+  XIcon,
+} from "lucide-react";
 
 export const settingsArray = [
-  { path: "general", name: "General" },
-  { path: "personalization", name: "Personalization" },
-  { path: "speech", name: "Speech" },
-  { path: "datacontrol", name: "Data Control" },
-  { path: "builderprofile", name: "Builder Profile" },
-  { path: "connectedapps", name: "Connected Apps" },
-  { path: "security", name: "Security" },
+  { path: "general", name: "General", icon: <BoltIcon size={18} /> },
+  {
+    path: "personalization",
+    name: "Personalization",
+    icon: <UserRoundSearch size={18} />,
+  },
+  { path: "speech", name: "Speech", icon: <AudioLines size={18} /> },
+  { path: "datacontrol", name: "Data Control", icon: <Database size={18} /> },
+  {
+    path: "builderprofile",
+    name: "Builder Profile",
+    icon: <BookUser size={18} />,
+  },
+  {
+    path: "connectedapps",
+    name: "Connected Apps",
+    icon: <LayoutGrid size={18} />,
+  },
+  { path: "security", name: "Security", icon: <ShieldCheck size={18} /> },
 ];
 
 function Settings() {
@@ -39,7 +63,7 @@ function Settings() {
                   className=" -translate-x-16 -translate-y-12"
                 >
                   <div className="hover:bg-ahBorderColor cursor-pointer rounded-full p-1">
-                    <img src={closelogo} className="w-6"></img>
+                    <X className="p-0.5" />
                   </div>
                 </Tooltip>
               </NavLink>
@@ -57,7 +81,9 @@ function Settings() {
                     return isActive && "bg-ahBorderColor rounded-md";
                   }}
                 >
-                  <div className="p-2 hover:bg-ahBorderColor rounded-md">
+                  <div className="p-2 flex items-center gap-2 hover:bg-ahBorderColor rounded-md">
+                    {setting.icon}
+
                     {setting.name}
                   </div>
                 </NavLink>
