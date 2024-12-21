@@ -1,14 +1,6 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable react/jsx-key */
 
-// import Tooltip from './Tooltip'
-// import Item from './Items/Item'
-// import { itemsArray } from './Items/itemsArray'
-import sidebar1 from "/icon/sidebar1.svg";
-import sidebarmobile from "/icon/sidebarmobile.svg";
-import newchat from "/icon/newchat.svg";
-import logo from "/icon/logo.svg";
-import menu from "/icon/menu.svg";
-import chatgptplus from "/icon/chatgptplus.svg";
 import Tooltip from "../../components/Tooltip";
 import Item from "./Items/Item";
 import { itemsArray } from "./Items/itemsArray";

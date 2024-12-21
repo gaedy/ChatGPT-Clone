@@ -1,6 +1,5 @@
 import { Fragment } from "react";
 import { Outlet, NavLink } from "react-router-dom";
-import close from "/icon/close.svg";
 import { X } from "lucide-react";
 
 function Pricing() {

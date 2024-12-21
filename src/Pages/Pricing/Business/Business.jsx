@@ -1,6 +1,4 @@
 import { Check } from "lucide-react";
-import check from "/icon/check.svg";
-import teams from "/icon/teams.svg";
 import { TeamsIcon } from "../../../assets/iconsJSX/icons";
 
 function Business() {

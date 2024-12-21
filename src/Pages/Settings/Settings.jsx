@@ -15,11 +15,9 @@ import {
   BookUser,
   Database,
   LayoutGrid,
-  Shield,
   ShieldCheck,
   UserRoundSearch,
   X,
-  XIcon,
 } from "lucide-react";
 
 export const settingsArray = [
