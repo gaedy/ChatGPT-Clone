@@ -86,7 +86,7 @@ function Nav({ toggleSidebarButton, isSidebarOpen }) {
           arrowClassName="left-5 border-l border-t"
         >
           <div
-            className={`hover:bg-ahHoverColor  p-2 rounded-lg cursor-pointer bg-none transition-all active:scale-95  
+            className={`hover:bg-ahHoverColor  p-2 rounded-lg cursor-pointer bg-none transition-all 
                     ${isSidebarOpen ? "md:hidden visible" : "visible"}`}
             onClick={toggleSidebarButton}
           >
@@ -102,7 +102,7 @@ function Nav({ toggleSidebarButton, isSidebarOpen }) {
         >
           <NavLink to="/">
             <div
-              className={`hover:bg-ahHoverColor p-2 rounded-lg cursor-pointer bg-none transition-all active:scale-95
+              className={`hover:bg-ahHoverColor p-2 rounded-lg cursor-pointer bg-none transition-all
                         ${isSidebarOpen ? "sm:hidden visible" : "visible"}`}
             >
               <SquarePen color="white" className="brightness-75" />
@@ -131,7 +131,7 @@ function Nav({ toggleSidebarButton, isSidebarOpen }) {
 
         <div
           className="hover:bg-ahHoverColor p-2 rounded-full ml-auto cursor-pointer bg-none relative 
-                transition-all duration-500 hidden md:flex active:scale-95"
+                transition-all duration-500 hidden md:flex"
           onClick={toggleProfileButton}
           ref={profileBottomRef}
         >

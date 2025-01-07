@@ -14,7 +14,7 @@ function PopBox2({ isOpen, refProp }) {
     y: isOpen ? 5 : 0,
     opacity: isOpen ? 1 : 0,
     config: { mass: 1, clamp: true, friction: 15, duration: 200 },
-    delay: isOpen ? 100 : 0,
+    // delay: isOpen ? 100 : 0,
   });
 
   if (!isOpen) {

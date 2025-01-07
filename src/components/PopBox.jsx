@@ -6,7 +6,7 @@ function PopBox({ isOpen, refProp }) {
     y: isOpen ? 0 : -5,
     opacity: isOpen ? 1 : 0,
     config: { mass: 1, easing: easings.steps(5), clamp: true, friction: 15 },
-    delay: isOpen ? 100 : 0,
+    // delay: isOpen ? 100 : 0,
   });
 
   if (!isOpen) {
